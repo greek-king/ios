@@ -1,0 +1,27 @@
+name: TalosAgent
+options:
+  bundleIdPrefix: com.talosforensics
+  deploymentTarget:
+    iOS: "14.0"
+  xcodeVersion: "15"
+settings:
+  SWIFT_VERSION: "5.0"
+  TARGETED_DEVICE_FAMILY: "1,2"
+  MARKETING_VERSION: "1.0"
+  CURRENT_PROJECT_VERSION: "1"
+targets:
+  TalosAgent:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - TalosAgent
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.talosforensics.agent
+      INFOPLIST_FILE: TalosAgent/Info.plist
+      CODE_SIGN_STYLE: Automatic
+      DEVELOPMENT_TEAM: ""
+      LD_RUNPATH_SEARCH_PATHS: ["$(inherited)", "@executable_path/Frameworks"]
+    info:
+      path: TalosAgent/Info.plist
+      properties: {}
